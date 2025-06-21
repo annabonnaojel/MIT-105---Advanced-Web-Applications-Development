@@ -18,7 +18,6 @@ urlpatterns = [
     path('qualification/<int:qualification_id>/update/', views.update_qualification, name='update_qualification'),
     path('reports/', views.report_trainers_with_qualifications, name='reports'),
     path('export/', views.export_trainers_with_qualifications_excel, name='export_trainers_with_qualifications_excel'),
-    path('test-email/', views.test_email, name='test_email'),
     path('password_reset/', auth_views.PasswordResetView.as_view(template_name='password_reset.html'), name='password_reset'),
     path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='password_reset_done.html'), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='password_reset_confirm.html'), name='password_reset_confirm'),

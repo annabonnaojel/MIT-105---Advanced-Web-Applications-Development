@@ -260,19 +260,7 @@ def HomePage(request):
         'data': data,
     }
 
-    return render(request, 'dashboard.html', context)
-
-
-from django.core.mail import send_mail
-def test_email(request):
-    send_mail(
-        'Test Email',
-        'This is a test message from the Trainer Registry System.',
-        'ojelannabonna@gmail.com',  # From
-        ['abbojel@tesda.gov.ph'],  # To
-        fail_silently=False,
-    )
-    return HttpResponse("Test email sent.")
+    return render(request, 'home.html', context)
 
 # views.py
 from django.shortcuts import render
